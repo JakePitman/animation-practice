@@ -8,10 +8,12 @@ export const Cube = () => {
   const { nodes, animations } = useGLTF("/scene.glb");
   const { ref, mixer, names, actions, clips } = useAnimations(animations);
 
-  const animation = actions[animationName];
-  if (actions && animation) {
-    animation.play();
-  }
+  useEffect(() => {
+    const animation = actions[animationName];
+    if (actions && animation) {
+      animation.play();
+    }
+  }, [animationName, actions]);
 
   return <primitive object={nodes.Scene} ref={ref} />;
 };
