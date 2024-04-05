@@ -2,18 +2,17 @@
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { Cube } from "./Cube";
 
 export const Experience = () => {
   return (
-    <Canvas>
+    <Canvas camera={{ position: [20, 15, 10] }}>
       <color args={["black"]} attach="background" />
       <OrbitControls />
-      <ambientLight />
+      <ambientLight intensity={2} />
+      <pointLight position={[0, 8, 0]} intensity={400} />
 
-      <mesh rotation={[Math.PI * 0.25, Math.PI * 0.25, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshNormalMaterial />
-      </mesh>
+      <Cube />
     </Canvas>
   );
 };
