@@ -9,8 +9,7 @@ export const Experience = () => {
     <Canvas camera={{ position: [20, 15, 10] }}>
       <color args={["black"]} attach="background" />
       <OrbitControls />
-      <ambientLight intensity={2} />
-      <pointLight position={[0, 8, 0]} intensity={400} />
+      <ambientLight />
 
       <Cube />
     </Canvas>
