@@ -29,14 +29,14 @@ export const Buttons = () => {
   return (
     <div className="z-10 absolute  h-full w-full text-white flex justify-center items-end pb-64">
       <Button
-        label="Float"
-        isActive={animationName === "Float"}
-        onClick={() => setAnimationName("Float")}
+        label="Idle"
+        isActive={animationName === "Idle"}
+        onClick={() => setAnimationName("Idle")}
       />
       <Button
-        label="Flip"
-        isActive={animationName === "Flip"}
-        onClick={() => setAnimationName("Flip")}
+        label="Shock"
+        isActive={animationName === "Shock"}
+        onClick={() => setAnimationName("Shock")}
       />
     </div>
   );

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { createContext, useContext } from "react";
 
-type AnimationName = "Float" | "Flip";
+type AnimationName = "Idle" | "Shock";
 type AnimationContext = {
   animationName: AnimationName;
   setAnimationName: React.Dispatch<React.SetStateAction<AnimationName>>;
@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const AnimationProvider = ({ children }: Props) => {
-  const [animationName, setAnimationName] = useState<AnimationName>("Float");
+  const [animationName, setAnimationName] = useState<AnimationName>("Idle");
 
   return (
     <AnimationContext.Provider value={{ animationName, setAnimationName }}>
