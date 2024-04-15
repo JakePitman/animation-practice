@@ -7,12 +7,12 @@ import { Robot } from "./Robot";
 
 export const Experience = () => {
   return (
-    <Canvas camera={{ position: [5, 15, 10] }}>
+    <Canvas camera={{ position: [0, 8, 10] }}>
       <color args={["black"]} attach="background" />
       <OrbitControls />
       <ambientLight />
 
-      <group scale={0.5}>
+      <group scale={0.2}>
         <Robot />
       </group>
       {/* <Cube /> */}
