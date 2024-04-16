@@ -34,11 +34,6 @@ export const Buttons = () => {
         onClick={() => setAnimationName("Idle")}
       />
       <Button
-        label="Typing"
-        isActive={animationName === "Typing"}
-        onClick={() => setAnimationName("Typing")}
-      />
-      <Button
         label="Explaining"
         isActive={animationName === "Explaining"}
         onClick={() => setAnimationName("Explaining")}
@@ -47,6 +42,11 @@ export const Buttons = () => {
         label="Shocked"
         isActive={animationName === "ShockedOutside"}
         onClick={() => setAnimationName("ShockedOutside")}
+      />
+      <Button
+        label="Typing"
+        isActive={animationName === "Typing"}
+        onClick={() => setAnimationName("Typing")}
       />
       <Button
         label="Pondering"
