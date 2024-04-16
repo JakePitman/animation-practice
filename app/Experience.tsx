@@ -12,7 +12,7 @@ export const Experience = () => {
       <OrbitControls />
       <ambientLight />
 
-      <group scale={0.2}>
+      <group scale={[0.2, 0.2, 0.2]}>
         <Robot />
       </group>
       {/* <Cube /> */}

@@ -2,7 +2,12 @@
 import { useState } from "react";
 import { createContext, useContext } from "react";
 
-type AnimationName = "Idle" | "Typing" | "Explaining";
+type AnimationName =
+  | "Idle"
+  | "Typing"
+  | "Explaining"
+  | "ShockedOutside"
+  | "PonderingScreen";
 type AnimationContext = {
   animationName: AnimationName;
   setAnimationName: React.Dispatch<React.SetStateAction<AnimationName>>;
