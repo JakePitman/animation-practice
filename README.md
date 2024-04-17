@@ -1,19 +1,13 @@
-# R3F Template
+# r3f/Blender Animation Practice
 
-A basic NextJS template, set up with r3f, drei, three, Tailwind and Typescript.
+This is a mini spike to see if I can create a rigged, animated mesh from scratch in Blender, then smoothly transition between animations in r3f.
 
-Happy 3D coding!
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Install deps
+```
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run server
+```
+yarn dev
+```
