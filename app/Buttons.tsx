@@ -29,6 +29,11 @@ export const Buttons = () => {
   return (
     <div className="z-10 absolute  h-full w-full text-white flex justify-center items-end pb-64">
       <Button
+        label="Sleeping"
+        isActive={animationName === "Sleeping"}
+        onClick={() => setAnimationName("Sleeping")}
+      />
+      <Button
         label="Idle"
         isActive={animationName === "Idle"}
         onClick={() => setAnimationName("Idle")}
@@ -39,9 +44,24 @@ export const Buttons = () => {
         onClick={() => setAnimationName("Explaining")}
       />
       <Button
+        label="Laughing"
+        isActive={animationName === "Laughing"}
+        onClick={() => setAnimationName("Laughing")}
+      />
+      <Button
         label="Shocked"
         isActive={animationName === "ShockedOutside"}
         onClick={() => setAnimationName("ShockedOutside")}
+      />
+      <Button
+        label="Idle-Outside"
+        isActive={animationName === "IdleOutside"}
+        onClick={() => setAnimationName("IdleOutside")}
+      />
+      <Button
+        label="Peering"
+        isActive={animationName === "LookingOutside"}
+        onClick={() => setAnimationName("LookingOutside")}
       />
       <Button
         label="Typing"
@@ -49,9 +69,19 @@ export const Buttons = () => {
         onClick={() => setAnimationName("Typing")}
       />
       <Button
+        label="Reading"
+        isActive={animationName === "ReadingScreen"}
+        onClick={() => setAnimationName("ReadingScreen")}
+      />
+      <Button
         label="Pondering"
         isActive={animationName === "PonderingScreen"}
         onClick={() => setAnimationName("PonderingScreen")}
+      />
+      <Button
+        label="Shocked-Screen"
+        isActive={animationName === "ShockedScreen"}
+        onClick={() => setAnimationName("ShockedScreen")}
       />
     </div>
   );

@@ -7,22 +7,23 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import HolographicMaterial from "./HolographicMaterial";
 import { useAnimationContext } from "./AnimationContext";
+import { MeshStandardMaterial } from "three";
 
-const holographicMaterial = new HolographicMaterial({});
+const holographicMaterial = new HolographicMaterial();
+const eyeMaterial = new MeshStandardMaterial({ color: "white" });
 
 export const Robot = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/robot.glb");
+  const { nodes, animations } = useGLTF("/robot.glb");
   const { actions, names } = useAnimations(animations, group);
   const { animationName } = useAnimationContext();
 
   useEffect(() => {
-    actions[animationName]?.reset().fadeIn(0.3).play();
-
+    actions[animationName]?.reset().fadeIn(0.5).play();
     return () => {
-      actions[animationName]?.fadeOut(0.3);
+      actions[animationName]?.fadeOut(0.5);
     };
-  }, [actions, animationName]);
+  }, [actions, names, animationName]);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -35,7 +36,7 @@ export const Robot = (props) => {
           <skinnedMesh
             name="Eye-Right"
             geometry={nodes["Eye-Right"].geometry}
-            material={holographicMaterial}
+            material={eyeMaterial}
             skeleton={nodes["Eye-Right"].skeleton}
           />
           <skinnedMesh

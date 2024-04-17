@@ -3,11 +3,17 @@ import { useState } from "react";
 import { createContext, useContext } from "react";
 
 type AnimationName =
+  | "Sleeping"
   | "Idle"
   | "Typing"
   | "Explaining"
+  | "Laughing"
+  | "IdleOutside"
+  | "LookingOutside"
   | "ShockedOutside"
-  | "PonderingScreen";
+  | "ReadingScreen"
+  | "PonderingScreen"
+  | "ShockedScreen";
 type AnimationContext = {
   animationName: AnimationName;
   setAnimationName: React.Dispatch<React.SetStateAction<AnimationName>>;
@@ -20,7 +26,7 @@ type Props = {
 };
 
 export const AnimationProvider = ({ children }: Props) => {
-  const [animationName, setAnimationName] = useState<AnimationName>("Idle");
+  const [animationName, setAnimationName] = useState<AnimationName>("Sleeping");
 
   return (
     <AnimationContext.Provider value={{ animationName, setAnimationName }}>
