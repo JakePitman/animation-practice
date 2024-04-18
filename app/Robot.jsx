@@ -5,26 +5,25 @@ Command: npx gltfjsx@6.2.16 public/robot.glb -o app/Robot.jsx
 
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { useAnimationContext } from "./AnimationContext";
 import HolographicMaterial from "./HolographicMaterial";
 import { MeshStandardMaterial } from "three";
-import { useAnimationContext } from "./AnimationContext";
 
 const holographicMaterial = new HolographicMaterial();
 const eyesMaterial = new MeshStandardMaterial({ color: "white" });
 
 export const Robot = (props) => {
   const group = useRef();
-  const { nodes, animations } = useGLTF("/robot.glb");
+  const { nodes, materials, animations } = useGLTF("/robot.glb");
   const { actions, names } = useAnimations(animations, group);
   const { animationName } = useAnimationContext();
 
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.3).play();
-
+    actions[animationName]?.reset().fadeIn(0.5).play();
     return () => {
-      actions[animationName].fadeOut(0.3);
+      actions[animationName]?.fadeOut(0.5);
     };
-  });
+  }, [actions, names, animationName]);
 
   return (
     <group ref={group} {...props} dispose={null}>
