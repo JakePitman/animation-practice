@@ -2,6 +2,8 @@
 
 This is a mini spike to see if I can create a rigged, animated mesh from scratch in Blender, then smoothly transition between animations in r3f.
 
+![Robot Demo](robot-demo.gif)
+
 ### Install deps
 ```
 yarn
