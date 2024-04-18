@@ -44,9 +44,19 @@ export const Buttons = () => {
         onClick={() => setAnimationName("Explaining")}
       />
       <Button
+        label="Asserting"
+        isActive={animationName === "Asserting"}
+        onClick={() => setAnimationName("Asserting")}
+      />
+      <Button
         label="Laughing"
         isActive={animationName === "Laughing"}
         onClick={() => setAnimationName("Laughing")}
+      />
+      <Button
+        label="Happy"
+        isActive={animationName === "Happy"}
+        onClick={() => setAnimationName("Happy")}
       />
       <Button
         label="Shocked"

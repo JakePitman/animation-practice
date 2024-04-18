@@ -6,11 +6,11 @@ Command: npx gltfjsx@6.2.16 public/robot.glb -o app/Robot.jsx
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import HolographicMaterial from "./HolographicMaterial";
-import { useAnimationContext } from "./AnimationContext";
 import { MeshStandardMaterial } from "three";
+import { useAnimationContext } from "./AnimationContext";
 
 const holographicMaterial = new HolographicMaterial();
-const eyeMaterial = new MeshStandardMaterial({ color: "white" });
+const eyesMaterial = new MeshStandardMaterial({ color: "white" });
 
 export const Robot = (props) => {
   const group = useRef();
@@ -19,11 +19,12 @@ export const Robot = (props) => {
   const { animationName } = useAnimationContext();
 
   useEffect(() => {
-    actions[animationName]?.reset().fadeIn(0.5).play();
+    actions[animationName].reset().fadeIn(0.3).play();
+
     return () => {
-      actions[animationName]?.fadeOut(0.5);
+      actions[animationName].fadeOut(0.3);
     };
-  }, [actions, names, animationName]);
+  });
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -34,16 +35,16 @@ export const Robot = (props) => {
           <primitive object={nodes.DEF_bottomLeftScreen001} />
           <primitive object={nodes.DEF_rightScreen001} />
           <skinnedMesh
-            name="Eye-Right"
-            geometry={nodes["Eye-Right"].geometry}
-            material={eyeMaterial}
-            skeleton={nodes["Eye-Right"].skeleton}
+            name="Eyes"
+            geometry={nodes.Eyes.geometry}
+            material={eyesMaterial}
+            skeleton={nodes.Eyes.skeleton}
           />
           <skinnedMesh
-            name="Screen-1"
-            geometry={nodes["Screen-1"].geometry}
+            name="Screens"
+            geometry={nodes.Screens.geometry}
             material={holographicMaterial}
-            skeleton={nodes["Screen-1"].skeleton}
+            skeleton={nodes.Screens.skeleton}
           />
           <skinnedMesh
             name="Torso"

@@ -7,6 +7,8 @@ type AnimationName =
   | "Idle"
   | "Typing"
   | "Explaining"
+  | "Asserting"
+  | "Happy"
   | "Laughing"
   | "IdleOutside"
   | "LookingOutside"
