@@ -27,72 +27,74 @@ export const Buttons = () => {
   const activeStyles = "border-b-white";
 
   return (
-    <div className="z-10 absolute  h-full w-full text-white flex justify-center items-end pb-64">
-      <Button
-        label="Sleeping"
-        isActive={animationName === "Sleeping"}
-        onClick={() => setAnimationName("Sleeping")}
-      />
-      <Button
-        label="Idle"
-        isActive={animationName === "Idle"}
-        onClick={() => setAnimationName("Idle")}
-      />
-      <Button
-        label="Explaining"
-        isActive={animationName === "Explaining"}
-        onClick={() => setAnimationName("Explaining")}
-      />
-      <Button
-        label="Asserting"
-        isActive={animationName === "Asserting"}
-        onClick={() => setAnimationName("Asserting")}
-      />
-      <Button
-        label="Laughing"
-        isActive={animationName === "Laughing"}
-        onClick={() => setAnimationName("Laughing")}
-      />
-      <Button
-        label="Happy"
-        isActive={animationName === "Happy"}
-        onClick={() => setAnimationName("Happy")}
-      />
-      <Button
-        label="Shocked"
-        isActive={animationName === "ShockedOutside"}
-        onClick={() => setAnimationName("ShockedOutside")}
-      />
-      <Button
-        label="Idle-Outside"
-        isActive={animationName === "IdleOutside"}
-        onClick={() => setAnimationName("IdleOutside")}
-      />
-      <Button
-        label="Peering"
-        isActive={animationName === "LookingOutside"}
-        onClick={() => setAnimationName("LookingOutside")}
-      />
-      <Button
-        label="Typing"
-        isActive={animationName === "Typing"}
-        onClick={() => setAnimationName("Typing")}
-      />
-      <Button
-        label="Reading"
-        isActive={animationName === "ReadingScreen"}
-        onClick={() => setAnimationName("ReadingScreen")}
-      />
-      <Button
-        label="Pondering"
-        isActive={animationName === "PonderingScreen"}
-        onClick={() => setAnimationName("PonderingScreen")}
-      />
-      <Button
-        label="Shocked-Screen"
-        isActive={animationName === "ShockedScreen"}
-        onClick={() => setAnimationName("ShockedScreen")}
-      />
+    <div className="z-10 absolute  h-full w-full text-white flex justify-center items-end pb-64 ">
+      <div className="w-3/4">
+        <Button
+          label="Sleeping"
+          isActive={animationName === "Sleeping"}
+          onClick={() => setAnimationName("Sleeping")}
+        />
+        <Button
+          label="Idle"
+          isActive={animationName === "Idle"}
+          onClick={() => setAnimationName("Idle")}
+        />
+        <Button
+          label="Explaining"
+          isActive={animationName === "Explaining"}
+          onClick={() => setAnimationName("Explaining")}
+        />
+        <Button
+          label="Asserting"
+          isActive={animationName === "Asserting"}
+          onClick={() => setAnimationName("Asserting")}
+        />
+        <Button
+          label="Laughing"
+          isActive={animationName === "Laughing"}
+          onClick={() => setAnimationName("Laughing")}
+        />
+        <Button
+          label="Happy"
+          isActive={animationName === "Happy"}
+          onClick={() => setAnimationName("Happy")}
+        />
+        <Button
+          label="Shocked"
+          isActive={animationName === "ShockedOutside"}
+          onClick={() => setAnimationName("ShockedOutside")}
+        />
+        <Button
+          label="Idle-Outside"
+          isActive={animationName === "IdleOutside"}
+          onClick={() => setAnimationName("IdleOutside")}
+        />
+        <Button
+          label="Peering"
+          isActive={animationName === "LookingOutside"}
+          onClick={() => setAnimationName("LookingOutside")}
+        />
+        <Button
+          label="Typing"
+          isActive={animationName === "Typing"}
+          onClick={() => setAnimationName("Typing")}
+        />
+        <Button
+          label="Reading"
+          isActive={animationName === "ReadingScreen"}
+          onClick={() => setAnimationName("ReadingScreen")}
+        />
+        <Button
+          label="Pondering"
+          isActive={animationName === "PonderingScreen"}
+          onClick={() => setAnimationName("PonderingScreen")}
+        />
+        <Button
+          label="Shocked-Screen"
+          isActive={animationName === "ShockedScreen"}
+          onClick={() => setAnimationName("ShockedScreen")}
+        />
+      </div>
     </div>
   );
 };
