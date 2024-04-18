@@ -1,6 +1,11 @@
 # r3f/Blender Animation Practice
 
-This is a mini spike to see if I can create a rigged, animated mesh from scratch in Blender, then smoothly transition between animations in r3f.
+This is a spike to see if I can:
+
+✅ Sculpt,  
+✅ Rig,  
+✅ Animate,  
+✅ And handle smooth transitions between animations
 
 ![Robot Demo](robot-demo.gif)
 
